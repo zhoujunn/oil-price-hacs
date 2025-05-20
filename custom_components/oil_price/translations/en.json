@@ -1,1 +1,15 @@
-
+{
+  "title": "China Oil Price",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Setup China Oil Price Sensor",
+        "description": "Enter name and region code.",
+        "data": {
+          "name": "Name",
+          "region": "Region (e.g. jiangsu)"
+        }
+      }
+    }
+  }
+}

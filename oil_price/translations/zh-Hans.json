@@ -1,0 +1,15 @@
+{
+  "title": "中国油价",
+  "config": {
+    "step": {
+      "user": {
+        "title": "设置油价传感器",
+        "description": "请输入名称和地区代码。",
+        "data": {
+          "name": "名称",
+          "region": "地区（如 jiangsu）"
+        }
+      }
+    }
+  }
+}

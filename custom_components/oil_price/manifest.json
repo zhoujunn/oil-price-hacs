@@ -5,6 +5,6 @@
   "documentation": "https://github.com/zhoujunn/oil-price-hacs",
   "dependencies": [],
   "codeowners": ["@zhoujunn"],
-  "requirements": ["beautifulsoup4", "lxml"],
-  "iot_class": "cloud_polling"
+  "requirements": ["beautifulsoup4", "aiohttp", "lxml"],
+  "config_flow": true
 }

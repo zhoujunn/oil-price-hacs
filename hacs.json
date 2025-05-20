@@ -1,0 +1,8 @@
+{
+  "name": "China Oil Price",
+  "content_in_root": false,
+  "domains": ["sensor"],
+  "country": "cn",
+  "render_readme": true,
+  "filename": "custom_components/oil_price/manifest.json"
+}

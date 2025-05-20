@@ -1,1 +1,0 @@
-"""China Oil Price integration."""

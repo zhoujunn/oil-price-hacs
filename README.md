@@ -1,6 +1,7 @@
 # 🛢️ China Oil Price for Home Assistant
 
 Get current oil prices in China by region, integrated into Home Assistant.
+更新版本：适配2025.6后的版本，
 
 ## 📦 Installation
 

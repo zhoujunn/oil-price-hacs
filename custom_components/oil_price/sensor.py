@@ -1,6 +1,7 @@
 import logging
 import aiohttp
 import datetime
+import re
 from bs4 import BeautifulSoup
 from homeassistant.helpers.entity import Entity
 from homeassistant.const import CONF_NAME, CONF_REGION
@@ -111,7 +112,12 @@ class OilPriceHintSensor(Entity):
         try:
             hint_section = soup.select_one("#youjiaCont > div:nth-of-type(2)")
             if hint_section:
-                self._state = hint_section.text.strip()
+                text = hint_section.text.strip()
+                left_part, price_part = text.split('(', 1)
+                time_part, oil_part = left_part.split(maxsplit=1)
+                match = re.findall(r'[$|(](.*?)[$|)]', text)
+                info = time_part + '\n预计上涨:' + match[0]
+                self._state = info
                 self._update_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         except Exception as e:
             _LOGGER.error(f"Error parsing hint data: {e}")
